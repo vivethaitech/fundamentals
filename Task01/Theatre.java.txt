@@ -1,0 +1,27 @@
+/* A class named Theatre with non static fields and non static method 
+   
+accessed using objects*/
+
+public class Theatre {
+	String movieName;//Non static field declaration
+	int movie_time;//Non static field declaration
+
+	public static void main(String[] args) {
+		Theatre movie1 = new Theatre();//Object creation and memory allocation
+		Theatre movie2 = new Theatre();
+		movie1.movieName = "Jailer";//Assigning non static field for movie1 instance(Object specific)
+		movie1.movie_time = 630;//Assigning non static field for movie1 instance(Object specific)
+		movie2.movieName = "Leo";//Assigning non static field for movie2 instance(Object specific)
+		movie2.movie_time = 7;//Assigning non static field for movie2 instance(Object specific)
+		movie1.watch_movie();//Non static method calling using movie1 instance
+		movie2.watch_movie();//Non static method calling using movie2 instance
+	}
+
+    /* Non static method  definition*/
+
+	public void watch_movie() {
+		System.out.println("Watching " + movieName);
+		System.out.println("Show Time is " + movie_time);
+	}
+
+}
